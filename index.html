@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Labyrinth</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header container text-center">
+        <h1 class="p-2">Maze Generator</h1>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+        <form class="container text-center" action="">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="horizontal-length">Horizontal Length</label>
+                    <input class="form-control" name="horizontal-length" type="number" value="10" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="vertical-length">Vertical Length</label>
+                    <input class="form-control" name="vertical-length" type="number" value="10" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="x-index">X</label>
+                    <input class="form-control" name="x-index" type="number" value="0" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="y-index">Y</label>
+                    <input class="form-control" name="y-index" type="number" value="0" required>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="button" id="generate">Generate Maze</button>
+        </form>
+        <div class="container p-3">
+            <div id="maze-container"></div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <h5 id="message" class="text-center"></h5>
+        </div>
+    </footer>
+
+    <!-- Load the script on the page. -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
